@@ -6,9 +6,52 @@ let styleAtag = {
   textDecoration: "none",
 };
 
+const healthConditions = [
+  "COVID Care",
+  "COVID Protrction",
+  "Dabetes Care",
+  "Mind Care",
+  "Liver Care",
+  "Cardiac",
+  "Pain Relief",
+  "Oral Care",
+  "Respiratory",
+  "Cold & Immunity",
+  "Stomach Care",
+  "Sexual Health",
+  "Eye and Ear Care",
+  "Elderly Care",
+];
+const healthConditionsURL = [
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+  "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
+];
+
 export default function Pharmacy() {
   return (
-    <div>
+    <div
+      style={{
+        fontSize: "14px",
+        fontFamily: "ibm_plex_sansregular",
+        color: "#02475b",
+        margin: "0",
+        boxSizing: "border-box",
+        padding: "90px 0 0",
+        marginTop: "0px",
+      }}
+    >
       <div
         style={{
           display: "inline-flex",
@@ -98,6 +141,26 @@ export default function Pharmacy() {
           <div></div>
         </div>
       </div>
+      <div>
+        <div
+          style={{
+            display: "inline-flex",
+            gap: "20px",
+            color: "#02475b",
+            fontSize: "12px",
+          }}
+        >
+          {healthConditionsURL.map((url) => healthConditionsFnURL(url))}
+          {healthConditions.map((condition) => healthConditionsFn(condition))}
+        </div>
+      </div>
     </div>
   );
+}
+
+function healthConditionsFn(e) {
+  return <div>{e}</div>;
+}
+function healthConditionsFnURL(e) {
+  return <img src={e}></img>;
 }
