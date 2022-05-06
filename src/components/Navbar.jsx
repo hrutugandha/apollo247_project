@@ -169,7 +169,7 @@ export default function Navbar() {
                 ></img>
               </a>
             </h1>
-            <div
+            {/* <div
               class="LocationSearch_locationContainer__1riv4 "
               style={{
                 fontSize: "14px",
@@ -239,7 +239,7 @@ export default function Navbar() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div
             class="Header_menuContainer__1Q0Sd"
@@ -315,7 +315,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li style={liStyle}>
-                <a href="/" style={aTag}>
+                <a href="/pharmacy" style={aTag}>
                   <i style={iTag}></i>
                   <p style={pTag}>Pharmacy</p>
                   <span style={spanTag}>
