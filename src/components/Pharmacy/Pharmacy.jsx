@@ -1,43 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { MedCard } from "./MedCard";
+import { HealthConditions } from "./HealthCondition";
 
 let styleAtag = {
   color: "#81a4ae",
   textDecoration: "none",
   marginBottom: "0px",
 };
-
-// const [
-//   COVIDCare,
-//   COVIDProtrction,
-//   DabetesCare,
-//   MindCare,
-//   LiverCare,
-//   Cardiac,
-//   PainRelief,
-//   OralCare,
-//   Respiratory,
-//   ColdAndImmunity,
-//   StomachCare,
-//   SexualHealth,
-//   EyeandEarCare,
-//   ElderlyCare,
-// ] = [
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-// ];
-// console.log(COVIDCare);
 
 const healthConditions = [
   "COVID Care",
@@ -55,22 +32,7 @@ const healthConditions = [
   "Eye and Ear Care",
   "Elderly Care",
 ];
-// const healthConditionsURL = [
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-//   "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
-// ];
+
 const obj = {
   COVID_Care:
     "https://newassets.apollo247.com/pub/media/healtharea/247images/i/c/ic_immunity_1.png",
@@ -101,6 +63,20 @@ const obj = {
   Elderly_Care:
     "https://newassets.apollo247.com/pub/media/healtharea/247images/a/d/adult.png",
 };
+
+const Main = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: red;
+`;
+
+const Second = styled.div`
+  display: flex;
+  gap: 25px;
+`;
+
 
 export default function Pharmacy() {
   return (
@@ -193,9 +169,9 @@ export default function Pharmacy() {
         <hr style={{ marginTop: "0px" }} />
         <div style={{ display: "flex" }}>
           <div>
-            <div class="MedicineAutoSearch_medicineSearchForm__3fz_N">
-              <div class="MuiFormControl-root MuiTextField-root MedicineAutoSearch_searchInput__1kk2n MuiFormControl-fullWidth">
-                <div class="MuiInputBase-root MuiInput-root jss9 MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl">
+            <div className="MedicineAutoSearch_medicineSearchForm__3fz_N">
+              <div className="MuiFormControl-root MuiTextField-root MedicineAutoSearch_searchInput__1kk2n MuiFormControl-fullWidth">
+                <div className="MuiInputBase-root MuiInput-root jss9 MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl">
                   <input
                     type="text"
                     aria-invalid="false"
@@ -203,21 +179,24 @@ export default function Pharmacy() {
                     id="searchProduct"
                     placeholder="Search medicines, brands and more"
                     value=""
-                    class="MuiInputBase-input MuiInput-input"
+                    className="MuiInputBase-input MuiInput-input"
                   ></input>
                 </div>
               </div>
-              <button class="AphButton_secondaryBtn__1zFnK AphButton_disable__kvKtr">
-                <i class="icon-ic-search MedicineAutoSearch_searchIco__2Hi4p"></i>
+              <button className="AphButton_secondaryBtn__1zFnK AphButton_disable__kvKtr">
+                <i className="icon-ic-search MedicineAutoSearch_searchIco__2Hi4p"></i>
               </button>
             </div>
             <div>
-              <img src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/w/e/web_circle_pharmacy.jpg"></img>
+              <img
+                src="https://newassets.apollo247.com/pub/media/magestore/bannerslider/images/w/e/web_circle_pharmacy.jpg"
+                alt=""
+              ></img>
             </div>
           </div>
           <div>
             <div>
-              <img src=""></img>
+              <img src="" alt=""></img>
               <p>Special Offers</p>
             </div>
             <div style={{ display: "flex" }}>
@@ -226,7 +205,10 @@ export default function Pharmacy() {
                 <button>UPLOAD</button>
               </div>
               <div>
-                <img src="https://newassets.apollo247.com/images/ic_prescription_pad.svg"></img>
+                <img
+                  src="https://newassets.apollo247.com/images/ic_prescription_pad.svg"
+                  alt=""
+                ></img>
               </div>
             </div>
             <div></div>
@@ -234,109 +216,172 @@ export default function Pharmacy() {
         </div>
         <hr />
         <div>
-          <div
-            style={{
-              display: "inline-flex",
-              gap: "20px",
-              color: "#02475b",
-              fontSize: "12px",
-            }}
-          >
-            {/* {
-              (healthConditionsURL.map((url) => {
-                healthConditionsFnURL(url);
-              }),
-              healthConditions.map((condition) =>
-                healthConditionsFn(condition)
-              )) */}
-
-            {/* {healthConditions.map((condition) => healthConditionsFn(condition))} */}
-          </div>
-          <div
-            style={{
-              display: "inline-flex",
-              gap: "5px",
-              color: "#02475b",
-              fontSize: "12px",
-              width: "1064px",
-            }}
-          >
-            {Object.keys(obj).map((item, i) => {
-              return (
-                <>
-                  <div
-                    style={{
-                      boxSizing: "border-box",
-                      padding: "5px",
-                      outline: "none",
-                      maxWidth: "calc(16.6667% - 0px)",
-                      transform: "translate3d(0px, 0px, 0px)",
-                    }}
-                  >
-                    <a
-                      href="https://www.apollopharmacy.in/shop-by-health-conditions/respiratory"
+          <div style={{ display: "flex", gap: "0px" }}>
+            <Swiper
+              // install Swiper modules
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              spaceBetween={50}
+              slidesPerView={3}
+              navigation
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={() => console.log("slide change")}
+            >
+              {Object.keys(obj).map((item, i) => {
+                return (
+                  <div style={{ marginLeft: "50px" }}>
+                    <SwiperSlide
                       style={{
-                        boxSizing: "border-box",
-                        textDecoration: "none",
-                        outline: "0",
-                        display: "block",
+                        flexShrink: "1",
+                        justifyContent: "center",
                       }}
                     >
                       <div
                         style={{
-                          margin: "0",
-                          boxSizing: "border-box",
-                          background: "#fff",
-                          boxShadow: "0 2px 4px 0 hsla(0,0%,50.2%,.3)",
-                          borderRadius: "10px",
-                          padding: "14px 7px",
-                          display: "flex",
-                          alignItems: "center",
+                          // padding: "5px",
+                          gap: "0px",
+                          justifyContent: "center",
                         }}
                       >
-                        <img
-                          src={obj[item]}
+                        <a
+                          href="https://www.apollopharmacy.in/shop-by-health-conditions/respiratory"
                           style={{
-                            width: "36px",
-                            aspectRatio: "auto 36 / 36",
-                            height: "36px",
+                            textDecoration: "none",
                             margin: "0",
-                            padding: "0",
-                            boxSizing: "border-box",
-                            marginRight: "12px",
-                          }}
-                        ></img>
-                        <p
-                          style={{
-                            margin: "0",
-                            fontWeight: "400",
-                            fontSize: "12px",
-                            fontFamily: "sans-serif",
-                            color: "#01475b",
-                            overflow: "hidden",
-                            width: "80px",
-                            justifyContent: "center",
-                            textAlign: "left",
                           }}
                         >
-                          {healthConditions[i]}
-                        </p>
+                          <div
+                            style={{
+                              margin: "0",
+                              boxSizing: "border-box",
+                              boxShadow: "0 2px 4px 0 gray",
+                              borderRadius: "10px",
+                              padding: "14px 7px",
+                              display: "flex",
+                              // gap: "5px",
+                              alignItems: "center",
+                            }}
+                          >
+                            <img
+                              key={i}
+                              src={obj[item]}
+                              style={{
+                                width: "36px",
+                                aspectRatio: "auto 36 / 36",
+                                height: "36px",
+                                margin: "0",
+                                padding: "0",
+                                boxSizing: "border-box",
+                                marginRight: "12px",
+                              }}
+                              alt=""
+                            ></img>
+                            <p
+                              style={{
+                                margin: "0",
+                                fontWeight: "400",
+                                fontSize: "12px",
+                                fontFamily: "sans-serif",
+                                width: "80px",
+                                justifyContent: "center",
+                                textAlign: "left",
+                              }}
+                            >
+                              {healthConditions[i]}
+                            </p>
+                          </div>
+                        </a>
                       </div>
-                    </a>
+                    </SwiperSlide>
                   </div>
-                </>
-              );
-            })}
+                );
+              })}
+              <br />
+              <br />
+            </Swiper>
           </div>
+        </div>
+        {/* ----------------------------------------- */}
+        <div>
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={3}
+            navigation
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            <Second>
+              {Object.keys(obj).map((item, i) => {
+                return (
+                  <HealthConditions
+                    key={i + 1}
+                    name={healthConditions[i]}
+                    imgURL={obj[item]}
+                  />
+                );
+              })}
+              <br />
+              <br />
+            </Second>
+          </Swiper>
+          <div
+            style={{
+              fontSize: "14px",
+              fontFamily: "ibm_plex_sansregular",
+              color: "#02475b",
+              boxSizing: "border-box",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "0 0 10px",
+              margin: "0 0 10px",
+              borderBottom: "1px solid rgba(2,71,91,.2)",
+            }}
+          >
+            <h3
+              style={{
+                color: "#02475b",
+                padding: "0",
+                boxSizing: "border-box",
+                fontWeight: "600",
+                margin: "0",
+                fontSize: "14px",
+                textTransform: "uppercase",
+                fontFamily: "sans-serif",
+                marginLeft: "20px",
+              }}
+            >
+              MUSCLETECH FLAT 35 PERCENT OFF
+            </h3>
+          </div>
+        </div>
+        <br />
+        <div>
+          <Main className="mainContainer">
+            {healthConditions.map((el, i) => (
+              <MedCard key={el._i} imageUrl={el} />
+            ))}
+          </Main>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
+          <h1>Hello</h1>
         </div>
       </div>
     </div>
   );
-}
-
-function healthConditionsFn(e) {
-  return <div>{e}</div>;
-}
-function healthConditionsFnURL(e) {
-  return <img src={e}></img>;
 }
