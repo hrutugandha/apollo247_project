@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/Home.css"
+import Footer from './Footer';
 import Nav from './Navbar';
 
 export default function Home() {
@@ -125,6 +126,7 @@ export default function Home() {
             </div>
 
           </div>
+          <Footer/>
 
 
           </div>
