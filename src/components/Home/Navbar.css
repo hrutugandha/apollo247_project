@@ -18,3 +18,12 @@ header{
     align-items: center;
     background-color: #fff;
 }
+
+.logoa{
+    height: 88px;
+    display: block;
+    padding: 37px 37px 12px 16px;
+}
+.logoa img{
+    width: 80px;
+}
